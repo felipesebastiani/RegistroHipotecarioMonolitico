@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                           http://www.springframework.org/schema/beans/spring-beans.xsd  
+                           http://www.springframework.org/schema/aop  
+                           http://www.springframework.org/schema/aop/spring-aop.xsd  
+                           http://www.springframework.org/schema/context  
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/jee
+                           http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+    <jee:jndi-lookup id="bd_registro_hipotecario" jndi-name="jdbc/bd_registro_hipotecario" lookup-on-startup="false" resource-ref="true" cache="true" proxy-interface="javax.sql.DataSource"/>    
+    <bean id="transactionManager_bd_registro_hipotecario" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" >
+          <property name="dataSource" ref="bd_registro_hipotecario" /> 
+    </bean>
+</beans>

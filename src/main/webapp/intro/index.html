@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" anycodings_javascript content="width=1024">
+<meta name="viewport" anycodings_javascript content="width=device-width, anycodings_javascript initial-scale=0.1">
+<style>
+	body {
+		background-color: #282828;
+	}
+	
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		flex-direction: column;
+	}	
+		
+	fullscreen { 
+		width : 100%;
+		height: 100%;
+		background: #000;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+	}
+
+	.btn {
+		background: #c1666b;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+</style>
+
+	<title>BANCO CSM - MODERNIZACION DE APLICACIONES</title>
+</head>
+<body translate="no" bgcolor="#000000">
+	<!-- 
+	<div class="container">
+		<video id="video1" width="100%" muted>
+			<source src="animacion_ibm.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+	-->
+
+	<div id="video-container" class="container">
+		<div class="btn" id="fullscreen"></div>
+		<video id="videoplayer" width="100%" autoplay playsinline muted>
+			<source src="animacion_ibm.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+
+</body>
+<script>
+	videoplayer.addEventListener('ended', myHandler, false);
+
+	document.addEventListener("click", function(event) {
+		try{
+			if (!event.target.matches(".btn")){
+				return;
+			}
+			
+			if(event != undefined && event != null){
+				event.preventDefault();
+			}
+	
+			const fullscreenElement = document.fullscreenElement
+					|| document.mozFullScreenElement
+					|| document.webkitFullscreenElement
+					|| document.msFullscreenElement;
+			if (fullscreenElement) {
+				//exitFullscreen();
+			} 
+			else {
+				//launchIntoFullscreen(document.getElementById("video-container"));
+			}
+		}
+		catch(error){
+			console.error(error)
+		}
+	});
+
+	function launchIntoFullscreen(element) {
+		try{
+			if (element.requestFullscreen) {
+				element.requestFullscreen();
+			} 
+			else if (element.mozRequestFullScreen) {
+				element.mozRequestFullScreen();
+			} 
+			else if (element.webkitRequestFullscreen) {
+				element.webkitRequestFullscreen();
+			} 
+			else if (element.msRequestFullscreen) {
+				element.msRequestFullscreen();
+			} 
+			else {
+				element.classList.toggle("fullscreen");
+			}
+		}
+		catch(error){
+			console.error(error)
+		}
+	}
+
+	function exitFullscreen() {
+		try{
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			} 
+			else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+			} 
+			else if (document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+			}
+		}
+		catch(error){
+			console.error(error)
+		}
+	}
+
+	function activarGUI() {
+		launchIntoFullscreen(document.getElementById("video-container"));
+	}
+
+	function myHandler(e) {
+		window.location = "../web/main.html";
+	}
+
+	window.onload = activarGUI;
+</script>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+	<Properties>
+		<Property name="log-path">logs</Property>
+		<Property name="archive">${log-path}/archive</Property>
+		<Property name="TheHostName0">${hostName}</Property>		
+	</Properties>
+	<Appenders>
+		<Console name="Console-Appender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>SERVER: ${TheHostName0} [%4p] [%d{dd-MM-yyyy HH:mm:ss.SSS}](%F:%L) - %m%n</pattern>
+			</PatternLayout>
+		</Console>
+		
+		<RollingFile name="RollingFile-Appender" fileName="${log-path}/RegistroHipotecarioMonolitico.log"
+			filePattern="${archive}/RegistroHipotecarioMonolitico.log.%d{dd-MM-yyyy}.gz">
+			<PatternLayout
+				pattern="SERVER: ${TheHostName0} [%4p] [%d{dd-MM-yyyy}] (%F:%L) - %m%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="30" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="pe.com.ibm.csm.app" level="INFO" additivity="false">
+			<!-- AppenderRef ref="File-Appender" level="debug" /-->
+			<AppenderRef ref="RollingFile-Appender" level="INFO" />
+			<AppenderRef ref="Console-Appender" level="INFO" />
+		</Logger>
+		<!-- 
+		<Root level="debug">
+			<AppenderRef ref="Console-Appender" />
+		</Root>
+		 -->
+	</Loggers>
+</Configuration>

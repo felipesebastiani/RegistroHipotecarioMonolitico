@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+	
+	<!--
+	<endpoint name="ebsPrestoInterfaceServiceSB11"
+		implementation="tic.app.impl.PrestoInterfaceServiceWSPortTypeImpl11"
+		url-pattern="/ebsPrestoInterfaceServiceSB11"/>
+		
+	<endpoint name="ebsPrestoInterfaceServiceSB12"
+		implementation="tic.app.impl.PrestoInterfaceServiceWSPortTypeImpl12"
+		url-pattern="/ebsPrestoInterfaceServiceSB12"/>
+	-->
+</endpoints>

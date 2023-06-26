@@ -1,0 +1,1157 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <title>BANCO CSM - MODERNIZACION DE APLICACIONES</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+        <link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+
+		<!-- CSS here -->
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../assets/css/slicknav.css">
+		<link rel="stylesheet" href="../assets/css/flaticon.css">
+		<link rel="stylesheet" href="../assets/css/animate.min.css">
+		<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="../assets/css/themify-icons.css">
+		<link rel="stylesheet" href="../assets/css/slick.css">
+		<link rel="stylesheet" href="../assets/css/nice-select.css">
+		<link rel="stylesheet" href="../assets/css/style.css">
+		<link rel="stylesheet" href="../assets/css/javascriptcaptcha.css">
+		
+		<link rel="stylesheet" href="../assets/intlTelInput/css/intlTelInput.css">
+		
+		<!-- custom css file link  -->
+		<link rel="stylesheet" href="css/style.css">
+            
+            <style type="text/css">
+				.apply-area{
+				    font-size:162%;
+				    overflow-x:hidden;
+				    scroll-behavior:smooth;
+				    scroll-padding-top:7rem
+				}
+				
+				.form-control {
+				    font-size:100%;
+				}
+				
+				input.currency{
+				    text-align:right;
+				    padding-right:15px;
+				}
+				
+				.input-group .form-control{
+				    float:none
+				}
+				
+				.input-group .input-buttons{
+				    position:relative;
+				    z-index:3
+				}
+				#sliderCuotaInicial .slider-selection{
+				    background:#bababa
+				}
+				
+				.loader{
+				    position:relative;
+				    text-align:center;
+				    margin:15px auto 35px;
+				    z-index:9999;
+				    display:block;
+				    width:80px;
+				    height:80px;
+				    border:10px solid rgba(0,0,0,.3);
+				    border-radius:50%;
+				    border-top-color:#000;
+				    animation:1s ease-in-out infinite spin;
+				    -webkit-animation:1s ease-in-out infinite spin
+				}
+				
+				
+				@keyframes spin{
+				    to{
+				        -webkit-transform:rotate(360deg)
+				    }
+				}
+				@-webkit-keyframes spin{
+				    to{
+				        -webkit-transform:rotate(360deg)
+				    }
+				}
+				
+				.modal-content{
+				    border-radius:0;
+				    box-shadow:0 0 20px 8px rgba(0,0,0,.7)
+				}
+				.modal-backdrop.show{
+				    opacity:.75
+				}
+				.loader-txt{
+				    color:#999
+				}
+				h4{
+				    font-weight:300!important;
+				    font-size:1.1em
+				}
+				
+				p{
+				    text-decoration:underline
+				}
+				
+				
+			    .custom_input-group {
+				  position: relative;
+				  display: -ms-flexbox;
+				  display: flex;
+				  -ms-flex-align: stretch;
+				  align-items: stretch;
+				  width: 100%;
+				}
+            </style>
+            <script type="text/javascript">
+				var protocolo = window.location.protocol;
+			       	var hostpath = window.location.host;
+			       	var context = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)); 
+		
+				//alert(hostpath);
+				//alert(context);
+				
+				function getBaseURL(){
+					return "/RegistroHipotecarioMonolitico";
+				}
+		
+				function getHomeURL(){
+					return getBaseURL() + "/web/main.html";
+				}
+			</script>
+   </head>
+
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="../assets/img/logo/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+   
+	
+	
+	<div class="header bg-light py-5">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-6">
+	                <a href="javascript:window.location=getBaseURL();" class="logo"><img src="images/logo.png" alt=""></a>
+	            </div>
+	            <div class="col-6 text-right">
+	                <div class="header-right-btn f-right d-none d-lg-block">
+						<a href="#" class="btnClone">+0800.997.356.386 </a>
+					</div>
+	            </div>
+	        </div>
+	        <!--/row-->
+	    </div>
+	    <!--container-->
+	</div>
+	<nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
+	    <div class="container">
+	        <a class="navbar-brand" href="javascript:window.location=getHomeURL();"><h3>>> Home </h3></a>
+	        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar1">
+	            <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse col-xl-7 col-lg-7 col-md-7" id="navbar1">
+	            <ul class="navbar-nav">
+	                <li class="nav-item">
+	                    <a class="nav-link" href="#services2"><h3>Servicios</h3></a>
+	                </li>
+	            </ul>
+	            <ul class="navbar-nav ml-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="#featured"><h3>Oportunidades</h3></a>
+	                </li>
+	            </ul>
+	            <ul class="navbar-nav ml-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="#agents"><h3>Agentes</h3></a>
+	                </li>
+	            </ul>
+	            <ul class="navbar-nav ml-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="#contact"><h3>Contacto</h3></a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
+	<br>
+	<br>		
+	<section>
+        <!--Hero End -->
+        <!-- Apply Area Start -->
+        <div class="apply-area">
+            <div class="container">
+	            <div class="row">
+			   		<div class="section-title location-center text-center reveal col-lg-9">
+						<h3 class="heading">Registrar Solicitud de Crédito Hipotecario</h3>
+					</div>
+				</div>
+				
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="apply-wrapper">
+                            <!-- Form -->
+                            <form action="#" name="formulario" id="formulario">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="row single-form">
+                                        	<span class="col-lg-4"><label>Número de Solicitud:</label></span>
+                                        	 <span class="col-lg-4 single-form">
+										    	<input type="text" value="" class="form-control" id="idSolicitud" name="idSolicitud" readonly="readonly" style="text-align: center;" />
+										    </span>
+										    <span class="col-lg-3 single-form">
+										    	<div id="divComboCasosSimulados" name="divComboCasosSimulados"/>														  
+											 </span>
+										</div> 
+                                    </div>
+                               </div>
+                               <div class="row">
+                                    <div class="col-lg-12">
+                                       <div class="single-form">
+                                       		<br>
+                                        	<label>Condiciones del Crédito:</label>
+										</div> 
+                                    </div>
+                               </div>
+                                <div class="row">     
+                                    <div class="col-lg-12">
+                                       <div class="row single-form">
+										    <span class="col-lg-4 input-group-addon">* Valor del Inmueble ($):</span>
+										    <span class="col-lg-8 single-form">
+										    	<input type="currency" value="0" data-number-to-fixed="2" data-number-stepfactor="100" class="number-separator form-control currency" id="montoInmueble" name="montoInmueble" />
+											 </span>
+										</div> 
+                                    </div>
+                                    
+                                    <div class="col-lg-12">
+                                       <div class="row single-form">
+										    <span class="col-lg-4 input-group-addon">Porcentaje de Cuota Inicial (%):</span>
+										    <span class="col-lg-8 single-form">
+										    	<input id="porcentajeCuotaInicial" name="porcentajeCuotaInicial" type="range" class="form-range" min="15" max="85" value="15" step="0.5" onchange="rangevalue.value=value + ' %'"/>
+										    	<center><output id="rangevalue">15 %</output></center>
+										    	<br>
+											 </span>
+											 
+										</div>											 
+                                    </div>
+                                    
+                                   <div class="col-lg-12">
+                                       <div class="row single-form">
+										    <span class="col-lg-4 input-group-addon">Número de meses:</span>
+										    <span class="col-lg-8 single-form">
+										    	<input id="numMeses" name="numMeses" type="range" class="form-range" min="12" max="240" value="5" step="1" onchange="rangevalueMeses.value=value + ' meses'"/>
+										    	<center><output id="rangevalueMeses">12 meses</output></center>
+										    	<br>
+											 </span>
+											 
+										</div>											 
+                                    </div>
+                                    
+                                       
+                                   <div class="col-lg-12">
+                                    	<div class="row single-form">
+										    <span class="col-lg-4 input-group-addon">Monto a financiar ($):</span>
+										    <span class="col-lg-8 single-form">
+										    	<input type="currency" value="0" min="0" step="100" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="montoAFinanciar" name="montoAFinanciar" readonly="readonly"/>
+											 </span>
+										</div> 
+                                    </div>
+                                    
+                                    <div class="col-lg-12">
+                                    	<div class="row single-form">
+										    <span class="col-lg-2">Tasa (%):</span>
+										    <span class="col-lg-2">
+										    	<input type="text" value="0" class="form-control currency" id="tasa" name="tasa" readonly="readonly"/>
+											</span>
+											<span class="col-lg-8">
+										    	<input type="text" value="" class="form-control"  style="text-align: right;" id="txtNumeroAletras" name="txtNumeroAletras" readonly="readonly" />
+											</span> 
+										</div> 
+                                    </div>
+                                    
+	                                   <!-- Nice Select -->
+	                                    <div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                            <span class="col-lg-4">* Tipo de Inmueble</span>
+	                                            <span class="col-lg-8 select-option input-group-addon">
+	                                                <select name="tipoInmueble" id="tipoInmueble">
+	                                                    <option value="DEPARTAMENTO">Departamento</option>
+	                                                    <option value="CASA">Casa</option>
+	                                                    <option value="CASA DE PLAYA">Casa de Playa</option>
+	                                                    <option value="TERRENO">Terreno</option>
+	                                                </select>
+												</span>
+	                                       </div>
+	                                    </div>
+                                     </div>
+                                    
+                                    <div class="row">
+	                                    <div class="col-lg-12">
+	                                       <div class="single-form">
+	                                       		<br>
+	                                        	<label>Datos del solicitante:</label>
+											</div> 
+	                                    </div>
+                               		</div>
+                               
+                                    <div class="row">
+	                                    <div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Género:</span>
+	                                        	<span class="col-lg-8 d-flex">
+													<!--Radio Select -->
+	                                           		<div class="select-radio6">
+		                                                <div class="radio">
+		                                                    <input id="radio00" name="genero" type="radio" checked="checked">
+		                                                    <label for="radio00" class="radio-label">Masculino</label>
+		                                                </div>
+		                                                <div class="radio">
+		                                                    <input id="radio01" name="genero" type="radio">
+		                                                    <label for="radio01" class="radio-label">Femenino</label>
+		                                                </div>
+		                                            </div>
+												</span>
+											</div> 
+	                                    </div>
+	                               </div>
+                                    
+                                    <br>
+                                    <div class="row">
+                                    	<div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Documento de Identidad:</span>
+	                                            <span class="col-lg-8 d-flex">
+	                                            	<input id="txtDocIdentidad" type="text" name="txtDocIdentidad" placeholder="Complete su documento de identidad">
+		                                        </span>
+											</div>
+										</div>
+										<div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Nombres:</span>
+	                                            <span class="col-lg-8 d-flex">
+	                                            	<input id="txtNombres" type="text" name="txtNombres" placeholder="Complete los nombres">
+		                                        </span>
+											</div>
+										</div>
+										
+										<div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Apellido Paterno:</span>
+	                                            <span class="col-lg-8 d-flex">
+	                                            	<input id="txtApellidoPaterno" type="text" name="txtApellidoPaterno" placeholder="Complete el apellido paterno">
+		                                        </span>
+											</div>
+										</div>
+										
+										<div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Apellido Materno:</span>
+	                                            <span class="col-lg-8 d-flex">
+	                                            	<input id="txtApellidoMaterno" type="text" name="txtApellidoMaterno" placeholder="Complete el apellido materno">
+		                                        </span>
+											</div>
+										</div>
+										
+										<div class="col-lg-12">
+	                                       <div class="row single-form">
+	                                        	<span class="col-lg-4">* Sueldo Bruto:</span>
+	                                            <span class="col-lg-8 single-form d-flex">
+	                                            	<input type="currency" value="0" min="0" data-number-to-fixed="2" class="number-separator form-control currency" id="txtSueldoBruto" name="txtSueldoBruto" placeholder="Ingrese el sueldo bruto (sin descuentos)"/>
+		                                        </span>
+											</div>
+										</div>
+									</div>
+                                    <!-- First Name -->
+                                    <div class="col-lg-12">
+                                        <div class="row single-form">
+                                            <span class="col-lg-12">* E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:agregarCampoEmail()"><i class='far fa-calendar-plus' style='font-size:24px;color:red'></i></a></span>
+										</div>
+                                        <div class="row single-form">
+                                        	<span class="col-lg-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span class="col-lg-8" id="pnlEmails" ></span>
+                                        </div>
+                                   	</div>     
+                                  
+                                  	<div class="col-lg-12">     
+                                        <div class="row single-form">
+                                            <span class="col-lg-12">* Telefonos:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:agregarCampoTelefono()"><i class='far fa-calendar-plus' style='font-size:24px;color:red'></i></a></span>
+										</div>
+                                        <div class="row single-form">
+                                        	<span class="col-lg-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                            <span class="col-lg-8" id="pnlTelefonos"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Last Name -->
+                                    <div class="col-lg-12">
+                                    	<div class="row single-form">
+	                                        <div class="captchaWrapper col-lg-3"><p id="status" style="color: #0263E0;"></p></div>
+										    	<div class="col-lg-3">
+										        	<input type="text" readonly id="generated-captcha" style="pointer-events: none;" autocomplete="off">
+										    	</div>
+										    <div class="col-lg-6">
+										        <input type="text" id="entered-captcha" placeholder="Enter the captcha..">
+										    </div>
+										</div>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                            <!-- End From -->
+                            <!-- Form btn -->
+                            <a href="javascript:click_btnEnviar();" class="btnClone">Registrar Solicitud</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Apply Area End -->
+		<br>
+    
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    
+    <section class="footer">
+	    <div class="footer-container">
+	
+	        <div class="box-container">
+	
+	            <div class="box">
+	                <h3>branch location</h3>
+	                <a href="#">India</a>
+	                <a href="#">USA</a>
+	                <a href="#">france</a>
+	                <a href="#">Perú</a>
+	                <a href="#">Japón</a>
+	            </div> 
+	            
+	            <div class="box">
+	                <h3>quick links</h3>
+	                <a href="#">home</a>
+	                <a href="#">services</a>
+	                <a href="#">featured</a>
+	                <a href="#">agents</a>
+	                <a href="#">contact</a>
+	            </div> 
+	
+	            <div class="box">
+	                <h3>extra links</h3>
+	                <a href="#">my account</a>
+	                <a href="#">my favorite</a>
+	                <a href="#">my list</a>
+	            </div> 
+	
+	            <div class="box">
+	                <h3>follow us</h3>
+	                <a href="https://facebook.com/freewebsitecode/">facebook</a>
+	                <a href="https://freewebsitecode.com/">twitter</a>
+	                <a href="https://freewebsitecode.com/">instagram</a>
+	                <a href="https://freewebsitecode.com/">linkedin</a>
+	                <a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos">youtube</a>
+	            </div> 
+	
+	        </div>
+	
+	        <div class="credit">created by <span><a href="https://cloud.ibm.com/docs/overview?topic=overview-csm&mhsrc=ibmsearch_a&mhq=customer+success+manager">CSM Team Perú</a></span> | Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </div>
+	
+	    </div>
+	
+	</section>
+    
+    <!-- Modal -->
+	<div class="modal fade" id="loadMe" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body text-center">
+	        <div class="loader"></div>
+	        <div clas="loader-txt">
+	          <p>Procesando la solicitud. <br><br><small>Espere un momento por favor</small></p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+    <!-- JS here -->
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="../assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="../assets/js/wow.min.js"></script>
+		<script src="../assets/js/animated.headline.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="../assets/js/jquery.nice-select.min.js"></script>
+		<script src="../assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="../assets/js/contact.js"></script>
+        <script src="../assets/js/jquery.form.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/mail-script.js"></script>
+        <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script type="text/javascript" src="../assets/js/script_alerts_frss.js"></script>
+        <script type="text/javascript" src="../assets/js/bootbox.js"></script>
+        <script type="text/javascript" src="../assets/js/numeroLetras.js"></script>
+        <script type="text/javascript" src="../assets/js/easy-number-separator.js"></script>
+        <script type="text/javascript" src="../assets/js/javascriptcaptcha.js"></script>
+        
+        <script type="text/javascript" src="../assets/intlTelInput/js/intlTelInput.js"></script>
+        <script type="text/javascript" src="../assets/js/datosSimulados.js"></script>
+        <script type="text/javascript">
+	        var emails = [];
+	        var telefonos = [];
+	        var max_emails = 3;
+	        var max_telefs = 3;
+        
+        	easyNumberSeparator({
+        		selector: '.number-separator',
+        		separator: ' '
+        	})
+        	
+	        $(document).ready(function() {
+	        	 $('#preloader-active').delay(450).fadeOut('slow');
+	             $('body').delay(450).css({
+	               'overflow': 'visible'
+	             });
+	        	
+	        	
+	        	
+	        	var random = "";
+	        	
+       	    	random = new Date().getTime() + "";
+       	    	console.log(random);
+       	    	random = random.substr(-7);
+	        	console.log(random);
+	            $("#idSolicitud").val("S" + random);
+	            
+				generateCaptcha();
+        		
+        		$("#generated-captcha").bind('cut copy', function(e) {
+                    e.preventDefault();
+                });
+        		
+        		precargarDatosSimulados();
+	        });
+        	
+        	function mostrarModal(){
+        		$("#loadMe").modal({
+  	       	      backdrop: "static", //remove ability to close modal with click
+  	       	      keyboard: false, //remove option to close with keyboard
+  	       	      show: true //Display loader!
+  	       	    });
+        	}
+	        
+        	function ocultarModal(){
+        		$("#loadMe").modal("hide");
+        	}
+        	
+	        function actualizarTasa(){
+				var montoTasa = 1.0;
+				var inicial = $('#porcentajeCuotaInicial').val();
+				
+	        	if(inicial <= 10.0){
+	        		montoTasa = 12.5;
+	        	}
+	        	else if(inicial <= 30){
+	        		montoTasa = 10.5;
+	        	}
+				else if(inicial <= 60){
+					montoTasa = 8.5;
+	        	}
+				else {
+					montoTasa = 6.5;
+	        	}
+	        	
+	        	$('#tasa').val((montoTasa * 1.0) + "");
+	        }
+	        
+	        $('#porcentajeCuotaInicial').change(function(e){	        	
+	        	actualizarTasa();
+	        });
+	        
+	        $("#porcentajeCuotaInicial").blur(function(){
+	        	actualizarTasa();
+        	}); 
+        
+	        $('#montoInmueble').change(function(e){
+	        	actualizarMontoAFinanciar();
+	        	
+	        	actualizarTasa();
+	        });
+	        
+	        function actualizarMontoAFinanciar(){
+	        	var montoInmueble = $('#montoInmueble').val();
+	        	montoInmueble = montoInmueble.replace(/\s/g, '');
+	        	var inicial = $('#porcentajeCuotaInicial').val();
+	        	var valor = Math.round(montoInmueble * inicial/100.0 * 100) / 100;
+	        	$('#montoAFinanciar').val(montoInmueble - valor);
+	        	
+	        	var ThenumeroALetras = numeroALetras(montoInmueble - valor, {
+	        		  plural: "DOLARES AMERICANOS",
+	        		  singular: "DOLAR AMERICANO",
+	        		  centPlural: "CENTIMOS",
+	        		  centSingular: "CENTIMO"
+	        		});
+	        	
+	        	$('#txtNumeroAletras').val(ThenumeroALetras);
+	        	console.log(ThenumeroALetras);
+	        }
+	        
+	        
+	        $("#montoInmueble").blur(function(){
+	        	actualizarTasa();
+        	}); 
+	        
+	        $("#numMeses").blur(function(){
+	        	actualizarTasa();
+        	}); 
+	        
+	         function click_btnEnviar(){
+	    		if(typeof console !== "undefined"){
+	    			console.log("btnEnviar");
+	    		}
+	    		
+	    		var campos_validos = true;
+	    		
+	    		var montoInmueble = $('#montoInmueble').val();
+	    		montoInmueble = montoInmueble.replace(/\s/g, '');
+	    		
+	        	var inicial = $('#porcentajeCuotaInicial').val();
+	        	var montoAFinanciar = montoInmueble * inicial/100.0;
+	        	var tipoInmueble = $("#tipoInmueble").val() + "";
+	        	
+	    		var radio00 = $("#radio00");
+	    		
+	    		var docIdentidad = ($("#txtDocIdentidad").val()) + "";
+	    		
+	    		var genero = "";
+	    		var nombres = ($("#txtNombres").val()).toUpperCase() + "";
+	    		var apellidoPaterno = ($("#txtApellidoPaterno").val()).toUpperCase() + "";
+	    		var apellidoMaterno = ($("#txtApellidoMaterno").val()).toUpperCase() + "";
+	    		var sueldoBruto = $('#txtSueldoBruto').val();
+	    		sueldoBruto = sueldoBruto.replace(/\s/g, '');
+	    		var montoSueldoBruto = sueldoBruto * 1.0;
+	    		
+	    		var fecha_actual = new Date();
+	    		
+	    		var  msg_error = "";
+	    		
+	    		if(montoInmueble.length <= 0 || montoInmueble <= 0 || isNaN(montoInmueble)){
+	    			campos_validos = false;
+	    			msg_error += "<li>Valor del Inmueble</li>";
+	    		}
+	    		
+	    		
+	    		if(radio00.is(':checked')){
+	    			genero = "MASCULINO";
+	    		}
+	    		else {
+	    			genero = "FEMENINO";
+	    		}
+	    		
+	    		if(docIdentidad.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Documento de Identidad</li>";
+	    		}
+	    		
+	    		if(nombres.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Nombres</li>";
+	    		}
+	    		
+	    		if(apellidoPaterno.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Apellido Paterno</li>";
+	    		}
+	    		
+	    		if(apellidoMaterno.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Apellido Materno</li>";
+	    		}
+
+	    		if(montoSueldoBruto.length <= 0 || montoSueldoBruto <= 0 || isNaN(montoSueldoBruto)){
+	    			campos_validos = false;
+	    			msg_error += "<li>Sueldo Bruto</li>";
+	    		}
+	    		
+	    		if(emails.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Email</li>";
+	    		}
+	    		
+	    		if(telefonos.length <= 0){
+	    			campos_validos = false;
+	    			msg_error += "<li>Telefono</li>";
+	    		}
+	    	
+	    		
+	    		if(typeof console !== "undefined"){
+	    			console.log("campos_validos? " + campos_validos);
+	    		}
+	    		
+	    		
+	    		if(checkCaptcha()==false){
+    				generateCaptcha();
+    				campos_validos = false;
+    				msg_error += "<li>Código de seguridad Captcha</li>";
+    			}
+	    		
+	    		if(campos_validos){
+	    			efectuarRegistro();
+	    		}
+	    		else {
+	    			msg_error = "<b>Los siguientes campos tienen valores incorrectos o están incompletos:</b><br><br>" + msg_error; 
+	    			showAlertMessage("Campos inválidos", msg_error);
+	    			
+	    			if(typeof console !== "undefined"){
+	    				console.log("Los campos no son validos");
+	    			}
+	    		}	
+	        }
+	        
+	        function agregarCampoEmail(){
+	        	var n = emails.length;
+	        	if(n < max_emails){
+		        	var theId = n + "_" + new Date().getTime() + "";
+		        	var cadena_email = "<div id='pnlEmail" + theId + "' class='custom_input-group'>"; 
+		        	cadena_email += "<input type='email' name='email" + theId + "' id='email" + theId + "' placeholder='Complete su email' class='form-control'/>";
+		        	cadena_email += "<span class='input-group-addon'>";
+		        	cadena_email += "<span id='btnEliminar" + theId + "' class='fa fa-trash' style='font-size:22px; color: rgb(0, 0, 255); margin-top: 18px;margin-left: 10px' onclick=\"javascript:eliminarCampoEmail('" + theId + "')\"/></span>";
+		        	cadena_email += "</div>";
+		        	$("#pnlEmails").append(cadena_email);
+		        	
+		        	emails.push(theId);
+	        	}
+	        }
+	        
+	        function eliminarCampoEmail(theId){
+	        	var n = emails.length;
+	        	var thepnlId = "";
+	        	for(i=0;i<n;i++){
+	        		
+	        		console.log(emails[i]  + " - " + theId);
+	        		if(emails[i] == theId){
+	        			//$("#pnlEmails").remove();
+	        			console.log($('#' + theId));
+	        			const element = document.getElementById("pnlEmail" + theId);
+	        			element.remove();
+	        			emails.splice(i, 1);
+	        			break;
+	        		}
+	        	}
+	        }
+	        
+	        function agregarCampoTelefono(){
+	        	var n = telefonos.length;
+	        	if(n < max_telefs){
+		        	var theId = n + "_" + new Date().getTime() + "";
+		        	var cadena_telefono = "<div id='pnlTelefono" + theId + "' class='custom_input-group'>"; 
+		        	cadena_telefono += "<input type='tel' name='telefono" + theId + "' id='telefono" + theId + "' placeholder='Complete su telefono' class=form-control'/>";
+		        	cadena_telefono += "<input type='hidden' id='fullphone" + theId + "'>";
+		        	cadena_telefono += "<span class='input-group-addon'>";
+		        	cadena_telefono += "<span id='btnEliminar" + theId + "' class='fa fa-trash' style='font-size:22px; color: rgb(0, 0, 255); margin-top: 18px;margin-left: 10px' onclick=\"javascript:eliminarCampoTelefono('" + theId + "')\"/></span>";
+		        	cadena_telefono += "</div>";
+		        	$("#pnlTelefonos").append(cadena_telefono);
+		        	
+		        	//<input id="Telef" class="phone" type="tel"><span id='valid-msg' class='hide'>✓</span><span id='error-msg' class='hide'></span>
+		        	
+		        	telefonos.push(theId);
+		        	activarTelefono(theId);
+	        	}
+	        }
+	        
+	        function eliminarCampoTelefono(theId){
+	        	var n = telefonos.length;
+	        	var thepnlId = "";
+	        	for(i=0;i<n;i++){
+	        		
+	        		console.log(telefonos[i]  + " - " + theId);
+	        		if(telefonos[i] == theId){
+	        			//$("#pnlTelefonos").remove();
+	        			console.log($('#' + theId));
+	        			const element = document.getElementById("pnlTelefono" + theId);
+	        			element.remove();
+	        			telefonos.splice(i, 1);
+	        			break;
+	        		}
+	        	}
+	        }
+	        
+	        function activarTelefono(theId){
+	        	var inputPnlTelefono = document.getElementById("pnlTelefono" + theId);
+	        	var inputfullphone = document.getElementById("fullphone" + theId);
+	        	var strtelefono = "telefono" + theId;
+       	    	var input = document.getElementById(strtelefono);
+        		console.log(input);
+        		
+
+        		// here, the index maps to the error code returned from getValidationError - see readme
+        		var errorMap = ["Número inválido", "Código de País inválido", "Número inválido", "Número inválido", "Número inválido"];
+
+        		var iti = window.intlTelInput(input, {
+        			initialCountry: "PE",
+        			hiddenInput: "full_phone" + theId,
+        			utilsScript: "../assets/intlTelInput/js/utils.js" // just for formatting/placeholders etc
+        		});
+
+        		var reset = function () {
+        			$("#" + strtelefono).css("color", "black");
+        		};
+
+        		// on blur: validate
+        		input.addEventListener('blur', function () {
+        			reset();
+        			if (input.value.trim()) {
+        				if (iti.isValidNumber()) {
+        					$("#" + strtelefono).css("color", "black");
+        					inputfullphone.value = iti.getNumber();
+        				}
+        				else {
+        					$("#" + strtelefono).css("color", "red");
+        				}
+                		console.log("input_full_phone: " + inputfullphone.value);
+        			}
+        		});
+
+        		// on keyup / change flag: reset
+        		input.addEventListener('change', reset);
+        		input.addEventListener('keyup', reset);
+        		
+        		
+        		
+        	}
+        	
+	         
+	        function efectuarRegistro(){
+	    		try {
+	    			mostrarModal();
+	    			
+	    			var idSolicitud = $("#idSolicitud").val();
+	    			var montoInmueble = $('#montoInmueble').val();
+	    			montoInmueble = montoInmueble.replace(/\s/g, '');//eliminamos espacios en blanco
+		        	var inicial = $('#porcentajeCuotaInicial').val();
+		        	var montoAFinanciar = montoInmueble * inicial/100.0;
+		        	var tipoInmueble = $("#tipoInmueble").val() + "";
+		        	var numMeses = $("#numMeses").val() + "";
+		    		var radio00 = $("#radio00");
+		    		
+		    		var genero = "";
+		    		var nombres = ($("#txtNombres").val()).toUpperCase() + "";
+		    		var apellidoPaterno = ($("#txtApellidoPaterno").val()).toUpperCase() + "";
+		    		var apellidoMaterno = ($("#txtApellidoMaterno").val()).toUpperCase() + "";
+		    		var docIdentidad = ($("#txtDocIdentidad").val()) + "";
+		    		var sueldoBruto = $('#txtSueldoBruto').val();
+		    		sueldoBruto = sueldoBruto.replace(/\s/g, '');//eliminamos espacios en blanco
+		    		var montoSueldoBruto = sueldoBruto * 1.0;
+		    		var montoTasa = $('#tasa').val();
+		    		
+
+
+		        	console.log("idSolicitud: " + idSolicitud);
+		        	console.log("montoInmueble: " + idSolicitud);
+		        	console.log("inicial: " + inicial);
+		        	console.log("montoAFinanciar: " + idSolicitud);
+		        	console.log("tipoInmueble: " + idSolicitud);
+		        	console.log("numMeses: " + numMeses);
+		        	console.log("sueldoBruto: " + sueldoBruto);
+		        	console.log("montoSueldoBruto: " + montoSueldoBruto);
+		        	console.log("montoTasa: " + montoTasa);
+		    		
+		        	var arreglo_email = [];
+			    	
+		        	try{
+			        	for(i=0;i<emails.length;i++){
+			    			var input_email = document.getElementById("email" + emails[i]);
+			    			console.log(input_email + "-" + input_email.value);
+			    			
+			    			var the_email = ( input_email.value + "").toLowerCase();
+			    			the_email = the_email.trim();
+			    			if(the_email.length > 0){
+			    				if(the_email != "undefined"){
+			    					arreglo_email.push(the_email);
+			    				}
+			    			}
+			    		}
+			    	}
+		    		catch(e){
+		    			console.log(e);
+		    		}
+		    		console.log(arreglo_email);
+		    		
+		    		
+		    		var arreglo_telefs = [];
+		    		try{
+			    		for(i=0;i<telefonos.length;i++){
+			    			var input_telef = document.getElementById("telefono" + telefonos[i]);
+			    			var inputfullphone = document.getElementById("fullphone" + telefonos[i]);
+	
+			    			var the_telef = inputfullphone.value + "";
+			    			the_telef = the_telef.trim();
+			    			if(the_telef.length > 0){
+			    				if(the_telef != "undefined"){
+			    					arreglo_telefs.push(the_telef);
+			    				}
+			    			}
+			    		}
+		    		}
+			    	catch(e){
+			    		console.log(e);
+			    	}
+			    	console.log(arreglo_telefs);
+		    		
+		    		
+		    		if(radio00.is(':checked')){
+		    			genero = "MASCULINO";
+		    		}
+		    		else {
+		    			genero = "FEMENINO";
+		    		}
+		    		
+		    		var str_emails = "";
+		    		var str_telefs = "";
+		    		
+		    		for(i=0;i<arreglo_email.length;i++){
+		    			if(i != arreglo_email.length-1){
+		    				str_emails += arreglo_email[i] + ",";
+		    			}
+		    			else{
+		    				str_emails += arreglo_email[i];
+		    			}
+		    		}
+		    		
+		    		for(j=0;j<arreglo_telefs.length;j++){
+		    			if(j != arreglo_telefs.length-1){
+		    				str_telefs += arreglo_telefs[j] + ",";
+		    			}
+		    			else{
+		    				str_telefs += arreglo_telefs[j];
+		    			}
+		    		}
+		    		
+	    			var request = new Object();
+	    			request.idSol = idSolicitud;
+	    			
+	    			var cliente = new Object();
+	    			cliente.idCli = docIdentidad;
+	    			cliente.dniCli = docIdentidad;
+	    			cliente.nombresCli = ($("#txtNombres").val()).toUpperCase() + "";
+	    			cliente.apellidoPatCli = apellidoPaterno;
+	    			cliente.apellidoMatCli = apellidoMaterno;
+	    			cliente.tipoCli = "gold";
+	    			cliente.correoCli = str_emails;
+	    			cliente.telefonoCli = str_telefs;
+	    			cliente.generoCli = genero;
+	    			request.cliente = cliente;
+	    			
+	    			var creditoHipotecario = new Object();
+	    			creditoHipotecario.idCre = idSolicitud;
+	    			creditoHipotecario.tipoCre = tipoInmueble;
+	    			creditoHipotecario.montoInicialCre = inicial;
+	    			creditoHipotecario.montoFinanciarCre = montoAFinanciar;
+	    			creditoHipotecario.plazoMesesCre = numMeses;
+	    			creditoHipotecario.sueldoBrutoCre = montoSueldoBruto;
+	    			creditoHipotecario.costoInmuebleCre = montoInmueble;
+	    			creditoHipotecario.tasaCre = montoTasa;
+	    			request.creditoHipotecario = creditoHipotecario;
+	    	
+	    			if(typeof console !== "undefined"){
+	    				console.log("Registro : " + JSON.stringify(request));
+	    			}
+	    			
+	    			var the_data = JSON.stringify(request);
+	    			console.log(the_data);
+	    			
+	    			var form_activado = true;
+	    			if(!form_activado){
+	    				return;	    					
+	    			}
+	    			
+	    		    jQuery.support.cors = true;
+	    		    jQuery.ajax({
+	    			    url: getBaseURL() + "/rest/registrarSolicitud",
+	    			    method: "POST",
+	    			    data: the_data,
+	    			    contentType: "application/json; charset=utf-8",
+	    			    crossDomain: true,
+	    			    headers: {
+	    					"Access-Control-Allow-Origin": "*",
+	    		        	"Access-Control-Allow-Credentials": "*",
+	    		    		"Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+	    		    		"Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers",
+	    				},
+	    			    dataType: "json",
+	    			    success: function (data){
+	    			    	if(typeof console !== "undefined"){
+	    			    		console.log("Registro Exitoso " + data.idSol)
+	    			    	}
+	    			    	ocultarModal();
+	    			    	
+	    			    	var idSol = data.idSol;
+	    			    	var codigo = data.auditoria.codigo;
+	    			    	var mensaje = data.auditoria.detalle;
+	    			    	
+	    			    	if(codigo == "0"){
+	    			    		showAlertMessage("Proceso Exitoso", "<p>Se registró correctamente la solicitud [" + idSol + "]</p><br>" + mensaje, irALHome);	
+	    			    	}
+	    			    	else {
+	    			    		showAlertMessage("Proceso con errores","<p>No se logró registrar la solicitud, reintente nuevamente.</p><br>" + mensaje, irALHome);
+	    			    	}
+	    			    	
+	    			    	// stop the form from submitting the normal way and refreshing the page
+	    		    		//event.preventDefault();
+	    		    		$('#formulario')[0].reset();
+	    			    },
+	    			    error: function(error){
+	    			    	if(typeof console !== "undefined"){
+	    			    		console.log(error);
+	    			    	}
+	    			    	
+	    			    	ocultarModal();
+	    			    	showAlertMessage("Proceso con errores", "No se logró registrar la solicitud, reintente nuevamente.", null);
+	    			        
+	    			     	// stop the form from submitting the normal way and refreshing the page
+	    			    	if(event != undefined && event != null){
+	    						event.preventDefault();
+	    					}
+	    			    }
+	    			});
+	    		}
+	    		catch(e) {
+	    			if(typeof console !== "undefined"){
+	    				console.log(e.stack);
+	    			}
+	    		}
+	    	}
+	        
+	        function irALHome(){
+	        	document.location = getBaseURL();
+	        }
+        </script>
+         <script type="text/javascript">
+	         function precargarDatosSimulados() {
+	        	var comboCasosSimulados = document.createElement("select");
+        		comboCasosSimulados.classList.add("form-control");
+        		comboCasosSimulados.style = "height:45px";
+	        	comboCasosSimulados.addEventListener("change", click_btnSimularDatos);
+	        	
+	        	var option = document.createElement("option");
+        	    option.setAttribute("value", -1);
+        	    option.appendChild(document.createTextNode("SELECCIONE"));
+        	    comboCasosSimulados.appendChild(option);
+	        	
+	        	for(i=0;i<personasSimuladas.length;i++){
+	        		
+	        		var option = document.createElement("option");
+	        	    option.setAttribute("value", i);
+	        	    option.appendChild(document.createTextNode("CASO " + (i+1)));
+	        	    comboCasosSimulados.appendChild(option);
+	        	    
+	        	    console.log(i + "")
+	        	}
+	        	
+	        	document.getElementById("divComboCasosSimulados").appendChild(comboCasosSimulados);
+	         }
+	         
+
+		        
+	        function click_btnSimularDatos(event) {
+	            var selectElement = event.target;
+	            var indice = selectElement.value;
+	            //alert(indice);
+	            
+	            var persona = personasSimuladas[indice];
+	            
+	            $("#txtNombres").val(persona.nombres);
+	            $("#txtApellidoPaterno").val(persona.apePat);
+	            $("#txtApellidoMaterno").val(persona.apeMat);
+	            $("#txtSueldoBruto").val(persona.sueldoBruto);
+	            $("#txtDocIdentidad").val(persona.docIdentidad);
+	            $("#montoInmueble").val(persona.montoInmueble);
+	            $("#porcentajeCuotaInicial").val(persona.porcentajeCuotaInicial);
+	            $("#numMeses").val(persona.numMeses);
+	            	            
+	            let element_tipoInmueble = document.getElementById("tipoInmueble");
+	            element_tipoInmueble.value = persona.tipoInmueble;
+	            
+	            actualizarTasa();
+	            actualizarMontoAFinanciar();
+	            
+	            var genero = persona.genero;
+	            if(genero == "MASCULINO"){
+	            	$("#radio00").prop("checked", true);
+	            	$("#radio01").prop("checked", false);
+	            }
+	            else {
+	            	$("#radio00").prop("checked", false);
+	            	$("#radio01").prop("checked", true);
+	            }
+				
+	            document.getElementById("entered-captcha").value = captcha;
+	            
+	            agregarEmailsContactoSimulado();
+	            agregarTelefonosContactoSimulado();
+	        }
+	        
+	        function agregarEmailsContactoSimulado(){
+	        	for(i=0;i<emailsContacto.length;i++){
+	        		var email = emailsContacto[i];
+	        		
+	        		agregarCampoEmail();
+	        		
+	        		var input_email = document.getElementById("email" + emails[i]);
+	        		input_email.value = emailsContacto[i];
+	        	}
+	        }
+	        
+	        function agregarTelefonosContactoSimulado(){
+	        	for(i=0;i<telefonosContacto.length;i++){
+	        		var telefono = telefonosContacto[i];
+	        		
+	        		agregarCampoTelefono();
+	        		
+	        		var input_telef = document.getElementById("telefono" + telefonos[i]);
+	        		input_telef.value = telefonosContacto[i];
+	        		
+	        		var inputfullphone = document.getElementById("fullphone" + telefonos[i]);
+	        		inputfullphone.value = "+51" + telefonosContacto[i];
+	        	}
+	        }
+        </script>
+    </body>
+</html>

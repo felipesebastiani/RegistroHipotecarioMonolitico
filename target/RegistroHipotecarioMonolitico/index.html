@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	<style>
+		
+	</style>
+				
+	</head>
+	<body translate="no" bgcolor="#000000">
+		
+	</body>
+	<script type="text/javascript">
+		var protocolo = window.location.protocol;
+	       	var hostpath = window.location.host;
+	       	var context = window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)); 
+
+		//alert(hostpath);
+		//alert(context);
+		
+		function getBaseURL(){
+			return "/RegistroHipotecarioMonolitico";
+		}
+
+		function getHomeURL(){
+			return getBaseURL() + "/web/main.html";
+		}
+	</script>
+	<script>
+		function getCookie(name) {
+		    var dc = document.cookie;
+		    var prefix = name + "=";
+		    var begin = dc.indexOf("; " + prefix);
+		    if (begin == -1) {
+		        begin = dc.indexOf(prefix);
+		        if (begin != 0){
+		        	return null;
+		        }
+		    }
+		    else {
+		        begin += 2;
+		        var end = document.cookie.indexOf(";", begin);
+		        if (end == -1) {
+		        	end = dc.length;
+		        }
+		    }
+		    // because unescape has been deprecated, replaced with decodeURI
+		    //return unescape(dc.substring(begin + prefix.length, end));
+		    return decodeURI(dc.substring(begin + prefix.length, end));
+		}
+	/*
+		var viewMode = getCookie("view-mode");
+		if(viewMode == "desktop"){
+		    viewport.setAttribute('content', 'width=1024');
+		}
+		else if (viewMode == "mobile"){
+		    viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+		}*/
+		window.location = getBaseURL() + "/intro/index.html";
+	</script>
+	
+</html>

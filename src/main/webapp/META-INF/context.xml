@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context crossContext="true">
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<ResourceLink global="jdbc/bd_registro_medico_gloria" name="jdbc/bd_registro_medico_gloria" type="javax.sql.DataSource"/>
+</Context>
